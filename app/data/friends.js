@@ -1,3 +1,5 @@
+//Friends array which will be used to match the user's data
+
 var friends=[
     {
         name:"Mike",
@@ -31,4 +33,5 @@ var friends=[
     }
 ];
 
+//exports friends array 
 module.exports=friends;

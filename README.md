@@ -14,12 +14,45 @@ To install the application follow the instructions below:
 * cd 
 * npm install
 
-## Running Locally
-To run the application locally and access it in your browser, first set the PORT environment variable to the value of your choice. An example is shown below.
+## USE 
+To use our web service, simply go to our homepage and take our state-of-the-art survey. Immediately after submitting the survey, your perfect best friend will pop up. We also have an API you can access to the network's users and their personalized information. For research purposes.
 
-* export PORT=3000
+## Requirements
+* Modularity in the form of separate files for server logic, storing of friends, views, and routing
+* 10-question survey to assess uniqueness of users
+* Use express, body-parser, and path npm packages in the server.js file
+* Separate JavaScript files for routing (htmlRoutes.js and apiRoutes.js)
+* Appropriate GET and POST routes for serving HTML pages and API callshttps://murmuring-island-94264.herokuapp.com/
+* Separate file for storing friends (friends.js)
+* Calculate best match for user once survey is completed and return that match to the user
 
-After the PORT environment variable has been set, run the Node.js application with the command below.
+## Technologies Used
+*JavaScript
+*jQuery
+*node.js
+*Express.js
+*HTML
+*Bootstrap
 
-* node server.js
-The application will now be running locally on PORT, in this case that is port 3000. You can then access it locally from your browser at the URL localhost:PORT, in this case localhost:3000.
+## Code Explanation
+* Our server.js file sets up the Express server, specifying our port number, the npm packages that need to be loaded, and also the routes, which we have externalized
+* There are 2 separate HTML files (home.html and survey.html) that serve as the front-end portion of our code; they determine what the user sees (the homepage and the survey, which will also show the resulting best match)
+* Our 2 routing files (htmlRoutes.js and apiRoutes.js) determine the back-end logic (based on the request being made, the response that gets sent to the browser); the HTML routes display the survey and the homepage based on the URL that is accessed, and the API routes send back existing content in our server-side data or add new friends
+* Best match is calculated by finding the friend with the minimal difference in scores and then sending that friend to the browser as a JSON object
+* A modal is then toggled, displaying the the best match to the person who just took the survey
+Friends are stored as such:
+{
+	name: "Charlie",
+	photo: "https://vignette3.wikia.nocookie.net/itsalwayssunny/images/0/0a/Charlie_%289%29.jpg",
+	scores: [5, 1, 2, 3, 1, 2, 5, 1, 1, 1]
+}
+
+## Screenshots
+
+### Home Page
+
+![alt text](https://github.com/satinder042890/friend-finder-node-express-app/blob/master/app/images/home.png)
+
+### Survey Page
+
+![alt text](https://github.com/satinder042890/friend-finder-node-express-app/blob/master/app/images/survey.png)

@@ -41,13 +41,13 @@ To use our web service, simply go to our homepage and take our state-of-the-art 
 * Best match is calculated by finding the friend with the minimal difference in scores and then sending that friend to the browser as a JSON object
 * A modal is then toggled, displaying the the best match to the person who just took the survey
 Friends are stored as such:
-'''
+```
 {
 	name: "Charlie",
 	photo: "https://vignette3.wikia.nocookie.net/itsalwayssunny/images/0/0a/Charlie_%289%29.jpg",
 	scores: [5, 1, 2, 3, 1, 2, 5, 1, 1, 1]
 }
-'''
+```
 
 ## Screenshots
 
